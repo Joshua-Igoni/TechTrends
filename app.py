@@ -24,6 +24,7 @@ handlers = [standout,standerr]
 
 logging.basicConfig(format = formatlog, level = logger, handlers=handlers)
 
+
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
 
