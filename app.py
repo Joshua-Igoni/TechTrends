@@ -5,7 +5,6 @@ from flask import Flask, jsonify, json, render_template, request, url_for, redir
 from werkzeug.exceptions import abort
 from werkzeug.wrappers import response
 
-
 # Setup logging
 logger = os.getenv("UDACITY LOGGER", "DEBUG").upper()
 logger = (
@@ -20,8 +19,6 @@ standout.setLevel(logging.DEBUG)
 standerr.setLevel(logging.DEBUG)
 
 formatlog ='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-standout.setFormatter(formatlog)
-standerr.setFormatter(formatlog)
 
 handlers = [standout,standerr]
 
@@ -98,6 +95,7 @@ def post(post_id):
 # Define the About Us page
 @app.route('/about')
 def about():
+    logging.info("About us page retrieved")
     return render_template('about.html')
 
 # Define the post creation functionality 
