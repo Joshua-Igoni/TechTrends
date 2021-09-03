@@ -14,16 +14,16 @@ logger = (
       else logging.DEBUG
   )
 
-stdout = logging.StreamHandler
-stderr = logging.StreamHandler
-stdout.setLevel(stdout,logging.DEBUG)
-stderr.setLevel(stderr,logging.DEBUG)
+standout = logging.StreamHandler(sys.stdout)
+standerr = logging.StreamHandler(sys.stderr)
+standout.setLevel(logging.DEBUG)
+standerr.setLevel(logging.DEBUG)
 
-formatlog ='%(asctime)s:%(name)s:%(levelname)s:%(message)s'
-stdout.setFormatter(formatlog)
-stderr.setFormatter(formatlog)
+formatlog ='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+standout.setFormatter(formatlog)
+standerr.setFormatter(formatlog)
 
-handlers = [stdout,stderr]
+handlers = [standout,standerr]
 
 logging.basicConfig(format = formatlog, level = logger, handlers=handlers)
 
