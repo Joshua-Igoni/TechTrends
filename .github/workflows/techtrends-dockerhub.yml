@@ -1,8 +1,7 @@
+## lets run another test
 ##  Named of the workflow.
 name: TechTrends - Package with Docker
 ## Set the trigger policy.
-## In this case, the workflow is execute on a `push` event,
-## or when a new commit is pushed to the repository
 on:
   push:
     branches:
@@ -27,7 +26,11 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
+<<<<<<< HEAD
           context: ./project/techtrends/ 
+=======
+          context: ./project/techtrends
+>>>>>>> 3d8a9e8934bea9ca6fbba15dbd21549d178eba47
           file: ./project/techtrends/Dockerfile
           push: true
           tags: joshbolten/techtrends:latest
