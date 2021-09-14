@@ -1,11 +1,28 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+Docker build -t techtrends . -f DOCKERFILE
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+Docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+Docker logs 29a0a33134e6
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+2021-09-13 04:47:58,519 - werkzeug - INFO -  * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021-09-13 04:48:39,294 - werkzeug - INFO - 172.17.0.1 - - [13/Sep/2021 04:48:39] "GET / HTTP/1.1" 200 -
+2021-09-13 04:48:39,508 - werkzeug - INFO - 172.17.0.1 - - [13/Sep/2021 04:48:39] "GET /static/css/main.css HTTP/1.1" 200 -
+2021-09-13 04:48:40,068 - werkzeug - INFO - 172.17.0.1 - - [13/Sep/2021 04:48:40] "GET /favicon.ico HTTP/1.1" 404 -
+2021-09-13 20:43:58,978 - werkzeug - INFO - 172.17.0.1 - - [13/Sep/2021 20:43:58] "GET /static/css/main.css HTTP/1.1" 304 -
+2021-09-13 22:03:59,905 - root - INFO - Article '2020 CNCF Annual Report' retrieved
+2021-09-13 22:04:00,348 - werkzeug - INFO - 172.17.0.1 - - [13/Sep/2021 22:04:00] "GET /1 HTTP/1.1" 200 -
+2021-09-13 22:04:02,568 - werkzeug - INFO - 172.17.0.1 - - [13/Sep/2021 22:04:02] "GET / HTTP/1.1" 200 -
+2021-09-13 22:04:04,720 - root - INFO - Article 'KubeCon + CloudNativeCon 2021' retrieved
+2021-09-13 22:04:04,721 - werkzeug - INFO - 172.17.0.1 - - [13/Sep/2021 22:04:04] "GET /2 HTTP/1.1" 200 -
+2021-09-13 22:04:08,620 - root - INFO - Article 'Kubernetes v1.20 Release Notes' retrieved
+2021-09-13 22:04:08,621 - werkzeug - INFO - 172.17.0.1 - - [13/Sep/2021 22:04:08] "GET /3 HTTP/1.1" 200 -
+2021-09-13 22:04:33,707 - werkzeug - INFO - 172.17.0.1 - - [13/Sep/2021 22:04:33] "GET /create HTTP/1.1" 200 -
+2021-09-13 22:04:56,255 - root - INFO - Article with title 'Why is Cloud Engineering so interesting?' created
+2021-09-13 22:04:56,271 - werkzeug - INFO - 172.17.0.1 - - [13/Sep/2021 22:04:56] "POST /create HTTP/1.1" 302 -
+2021-09-13 22:04:56,301 - werkzeug - INFO - 172.17.0.1 - - [13/Sep/2021 22:04:56] "GET / HTTP/1.1" 200 -
+2021-09-13 22:05:15,322 - app - INFO - Metrics request successfull
+2021-09-13 22:05:15,323 - werkzeug - INFO - 172.17.0.1 - - [13/Sep/2021 22:05:15] "GET /metrics HTTP/1.1" 200 - 
