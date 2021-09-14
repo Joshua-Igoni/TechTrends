@@ -28,7 +28,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ./Dockerfile
+          file: ./project/techtrends/Dockerfile
           push: true
           tags: techtrends-udacity/techtrends:latest
       - name: Image digest
