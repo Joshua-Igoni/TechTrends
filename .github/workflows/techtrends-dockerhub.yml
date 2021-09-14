@@ -1,8 +1,6 @@
 ##  Named of the workflow.
 name: TechTrends - Package with Docker
 ## Set the trigger policy.
-## In this case, the workflow is execute on a `push` event,
-## or when a new commit is pushed to the repository
 on:
   push:
     branches:
