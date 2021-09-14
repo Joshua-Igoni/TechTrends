@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: Udacitytechtrends
+  namespace: sandbox
+  name: techtrends
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: Udacitytechtrends
+  template:
+    metadata:
+      labels:
+        app: Udacitytechtrends
+    spec:
+      containers:
+      - name: techtrends
+        image: pranitbauva1997/techtrends:latest
+        ports:
+        - containerPort: 3111
+          protocol: TCP
+        livenessProbe:
+          initialDelaySeconds: 10
+          periodSeconds: 5
+          httpGet:
+            path: /healthz
+            port: 3111
+        readinessProbe:
+          initialDelaySeconds: 10
+          periodSeconds: 5
+          httpGet:
+            path: /healthz
+            port: 3111
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
