@@ -26,11 +26,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-<<<<<<< HEAD
-          context: ./project/techtrends/ 
-=======
-          context: ./project/techtrends
->>>>>>> 3d8a9e8934bea9ca6fbba15dbd21549d178eba47
+          context: ./project/techtrends/
           file: ./project/techtrends/Dockerfile
           push: true
           tags: joshbolten/techtrends:latest
