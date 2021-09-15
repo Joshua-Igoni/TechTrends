@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: techtrends-staging
+  namespace: argocd
+
+spec:
+  source:
+    path: project/helm/
+    repoURL: https://github.com/Joshua-Igoni/nd064_course_1.git
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values-staging.yaml
+
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
