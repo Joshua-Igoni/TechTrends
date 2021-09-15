@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: techtrends-prod
+  namespace: argocd
+
+spec:
+  source:
+    path: helm
+    helm:
+      valueFiles:
+        - values-prod.yaml
+    repoURL: https://github.com/Joshua-Igoni/nd064_course_1.git
+    targetRevision: HEAD
+
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default

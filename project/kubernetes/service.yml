@@ -9,7 +9,7 @@ spec:
   ports:
   - port: 4111
     protocol: TCP
-    targetPort: 4111
+    targetPort: 3111
   selector:
     app: Udacitytechtrends
   type: ClusterIP

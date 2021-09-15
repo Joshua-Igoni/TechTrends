@@ -1,6 +1,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  label:
-    app: techtrends
-  name: sandbox
+    name: sandbox

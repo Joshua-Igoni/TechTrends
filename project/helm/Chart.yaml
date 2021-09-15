@@ -1,0 +1,8 @@
+apiVersion: v1
+name:  techtrends
+Description: Udacity_techtrends_app
+Keywords:
+- techtrends
+version: 1.0.0
+maintainers:
+- name: Joshua Igoni
